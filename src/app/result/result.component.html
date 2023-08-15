@@ -1,0 +1,27 @@
+<h3 class="center heading">{{title | uppercase}}</h3>
+
+<div class="row page_margin">
+    <div *ngFor="let item of questions; let i = index">
+        <div class="quiz">
+            {{item.question | htmlToText}}
+        </div>
+        <table class="options">
+            <tr>
+                <td *ngFor="let option of item.options">
+                    <button class="optionQues" [class.correctOption]="option === item.correct_answer"
+                        [class.selectedOption]="option === item.selectedAnswer && item.isCorrect"
+                        [class.wrongOption]="option === item.selectedAnswer && !item.isCorrect">
+                        {{option | htmlToText}}</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="result">
+        <p class="center"><span [class.bgRed]="correctAnswers <= 1"
+                [class.bgYellow]="correctAnswers > 1 && correctAnswers <= 3" [class.bgGreen]="correctAnswers > 3">You
+                scored {{correctAnswers}} out of {{questions?.length}}.</span></p>
+    </div>
+    <div class="center quiz">
+        <button class="submit" [routerLink]="['/quiz']">Create a new quiz</button>
+    </div>
+</div>

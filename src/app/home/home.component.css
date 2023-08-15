@@ -1,0 +1,55 @@
+.full_width {
+    width: 100%;
+}
+
+.submitBtn {
+    margin-top: 3%;
+}
+
+.page_margin {
+    margin: 3%;
+}
+
+.quiz {
+    margin-top: 2%;
+}
+
+.options {
+    margin-top: 5px;
+}
+
+.optionQues {
+    background-color: #ffffff;
+    border: 2px solid #008000;
+    border-radius: 5%;
+    color: #008000;
+}
+
+.optionQues:hover {
+    background-color: #008000;
+    border: 2px solid #008000;
+    border-radius: 5%;
+    color: #ffffff;
+}
+
+.selectedOption {
+    background-color: #008000;
+    border: 2px solid #008000;
+    border-radius: 5%;
+    color: #ffffff;
+}
+
+.heading {
+    margin-top: 2%;
+}
+
+.center {
+    text-align: center;
+}
+
+.submit {
+    background-color: #808080;
+    color: #ffffff;
+    width: 70%;
+    border-radius: 5%;
+}
